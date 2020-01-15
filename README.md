@@ -15,7 +15,6 @@ Everything is utilized except for `axios` which is installed and ready to import
 ### Dependencies
 - react
 - react-dom
-- react-tooltip
 - styled-components
 
 #### All at once

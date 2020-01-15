@@ -8,13 +8,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* Render from webpack bundle.js */
-app.use(express.static(__dirname + '/../public'));
+app.use('/home', express.static(__dirname + '/../public'));
 
 
 
 /* If all else redirect home */
 app.get('*', (req, res) => {
-  res.redirect(301, '/')
+  res.redirect(301, '/home')
 })
 
 /*************************************
@@ -23,5 +23,5 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`
   Server is listening on port ${port}
-  visit http://127.0.0.1:${port}/`)
+  visit http://127.0.0.1:${port}/home`)
 })
