@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server",
-    "build": "webpack -d --watch"
+    "dev": "nodemon server & webpack -d --watch "
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
     "babel-loader": "^8.0.6",
     "express": "^4.17.1",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-livereload-plugin": "^2.2.0"
   },
   "dependencies": {
     "react": "^16.12.0",

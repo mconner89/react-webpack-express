@@ -9,8 +9,9 @@ app.use(express.urlencoded({ extended: true }));
 
 /* Render from webpack bundle.js */
 app.use('/home', express.static(__dirname + '/../public'));
-
-
+app.get('/home', (req, res) => {
+  res.status(200).send()
+})
 
 /* If all else redirect home */
 app.get('*', (req, res) => {
