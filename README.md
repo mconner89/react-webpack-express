@@ -1,6 +1,11 @@
 # react-webpack-express
-My version of create-react-app
-Everything is utilized except for `axios` which is installed and ready to import
+Skeleton setup:
+- React @16.12.0
+- Webpack @4.41.5
+- Babel @7.8.3
+- Express @4.17.1
+- Styled components
+
 ### Dev Dependencies
 - @babel/cli
 - @babel/core
@@ -19,5 +24,4 @@ Everything is utilized except for `axios` which is installed and ready to import
 
 #### All at once
 `npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-loader axios express webpack webpack-cli`
-
 `npm i --save react react-dom styled-components`
