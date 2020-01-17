@@ -7,7 +7,7 @@ This is a super basic setup to get started with react, webpack, babel, express.
 3. `npm install`
 4. `npm run dev`
 5. `npm run start`
-***
+
 #### Dependencies last updated 1/16/2020
 [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) is suggested for proper syntax highlighting
 
@@ -23,7 +23,7 @@ Basic example of `styled-components`
 
 ***Note: No testing frameworks included, [Jest](https://jestjs.io/docs/en/getting-started) is suggested***
 
-***
+
 ### Dev Dependencies
 - @babel/cli
 - @babel/core
@@ -40,7 +40,7 @@ Basic example of `styled-components`
 - react-dom
 - styled-components
 
-***
+
 #### All at once
 ###### if you do not want to clone repo, here's the npm install
 ###### Dev Dependencies
