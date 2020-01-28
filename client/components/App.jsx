@@ -19,6 +19,7 @@ const StyledH1 = styled.h1`
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {};
   }
 
   render() {

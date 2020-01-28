@@ -1,22 +1,13 @@
 const express = require('express');
+
 const app = express();
+const port = 3000;
 
-const port = 4444;
-
-/* These parse JSON and encoded url's */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* Render from webpack bundle.js */
-app.use('/home', express.static(__dirname + '/../public'));
-app.get('/home', (req, res) => {
-  res.status(200).send()
-})
-
-/* If all else redirect home */
-app.get('*', (req, res) => {
-  res.redirect(301, '/home')
-})
+app.use(express.static(__dirname + '/../public'));
 
 /*************************************
 *** DO NOT PUT ANYTHING AFTER THIS ***
@@ -24,5 +15,5 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
   console.log(`
   Server is listening on port ${port}
-  visit http://127.0.0.1:${port}/home`)
+  visit http://127.0.0.1:${port}/`)
 })
