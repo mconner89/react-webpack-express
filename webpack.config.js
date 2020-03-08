@@ -1,4 +1,5 @@
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+
 module.exports = {
   entry: __dirname + '/client/index.jsx',
   output: {
@@ -11,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: [/\.jsx?$/],
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
