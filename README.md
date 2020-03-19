@@ -44,6 +44,6 @@ Basic example of `styled-components`
 #### All at once
 ###### if you do not want to clone repo, here's the npm install
 ###### Dev Dependencies
-1. `npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-loader axios express webpack webpack-cli webpack-livereload-plugin`
+1. `npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-loader axios express webpack webpack-cli webpack-livereload-plugin css-loader style-loader`
 ###### Dependencies
-2. `npm i --save react react-dom styled-components`
+2. `npm i --save react react-dom styled-components faker`
