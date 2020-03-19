@@ -10,10 +10,6 @@ class App extends React.Component {
       items: new Array(10).fill('text')
     };
   }
-  // componentDidMount() {
-  //   const items = new Array(10).fill('text')
-  //   this.setState({items})
-  // }
 
   render() {
     return (
