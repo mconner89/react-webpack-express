@@ -7,7 +7,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* Render from webpack bundle.js */
-app.use(express.static(__dirname + '/../public'));
+app.use('/',express.static(__dirname + '/../public'));
+app.use('/home',express.static(__dirname + '/../public'));
 
 /*************************************
 *** DO NOT PUT ANYTHING AFTER THIS ***

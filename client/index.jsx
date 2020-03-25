@@ -22,14 +22,17 @@ import { createGlobalStyle } from 'styled-components'
     font-family: 'Rokkitt', serif;
     word-spacing: .1em;
   }
+
   html {
     font-size: calc(1em + .70vw);
     @media screen and (min-width: 70em) {
-      font-size: 1.4em;
+      /* May vary between 1.4em - 1.6em depending on font.*/
+      /* used for smooth transition */
+      font-size: 1.5em;
     }
   }
   body {
-    margin: 0;
+    margin: 0 auto;
   }
   nav {
     position: fixed;
@@ -41,16 +44,22 @@ import { createGlobalStyle } from 'styled-components'
     display: flex;
     align-items: center;
 
-    background-color: #ffffff;
+    background: linear-gradient(0deg, rgba(150,150,150,.9) 0%, rgba(230,230,230,.8) 58%, rgba(230,230,230, .8) 100%);
+    backdrop-filter: blur(3px);
     box-shadow: 0 0 3px #191919;
     a {
       color: #191919;
       text-decoration: none;
       margin: 0 2vw;
       padding: 6px 1vw;
-      :hover {
-        background-color: #F0F0F0;
+      border-radius: 3px;
+      user-select: none;
+      -webkit-user-drag: none;
+      :hover, :focus {
+        background-color: rgba(220,220,220, .25);
+        box-shadow: 0 0 5px inset rgba(0,0,0, .25);
       }
+
     }
   }
   p {
@@ -59,17 +68,27 @@ import { createGlobalStyle } from 'styled-components'
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Fresca', sans-serif;
   }
-  .page {
-    padding-top: 60px;
-    max-width: 1200px;
+  hr {
+    border: none;
+    height: .1em;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(25,25,25,1) 50%, rgba(255,255,255, 1) 80%);
   }
   .section {
-    margin: 0 auto;
+    margin: 1em auto;
     width: 80%;
+    max-width: 1200px;
+    transition: width .5s;
+    padding: 1em;
+  }
+  .page {
+    padding-top: 80px;
+    margin: 0 auto;
   }
   @media screen and (max-width: 640px) {
     .section {
-      width: 94%;
+      width: 90%;
+      padding-top: .5em;
+      padding-bottom: .5em
     }
   }
 `
