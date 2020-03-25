@@ -10,7 +10,6 @@ class App extends React.Component {
       items: new Array(10).fill('text')
     };
   }
-
   render() {
     return (
       <React.Fragment>

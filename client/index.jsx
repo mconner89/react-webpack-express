@@ -12,10 +12,10 @@ import { createGlobalStyle } from 'styled-components'
     width: .5em;
   }
   ::-webkit-scrollbar-track {
-    background: linear-gradient(90deg, #FFF 0%, #000 100%);
+    background: linear-gradient(90deg, #FFF -75%, #000 50%, #FFF 175%);
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #FFF 0%, #00E150 100%);
+    background: linear-gradient(90deg, #FFF -75%, #00E150 50%, #FFF 175%);
     border-radius: 2px;
   }
   * {
@@ -29,8 +29,7 @@ import { createGlobalStyle } from 'styled-components'
     }
   }
   body {
-    display: flex;
-    justify-content: center;
+    margin: 0;
   }
   nav {
     position: fixed;
