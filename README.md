@@ -5,8 +5,8 @@ This is a super basic setup to get started with react, webpack, babel, express.
 1. ` git clone https://github.com/ptbarnum4/react-webpack-express.git`
 2. `cd react-webpack-express`
 3. `npm install`
-4. `npm run dev`
-5. `npm run start`
+4. `npm run dev` (development)
+5. `npm start`
 
 #### Dependencies last updated 1/16/2020
 [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) is suggested for proper syntax highlighting
