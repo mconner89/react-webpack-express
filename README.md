@@ -13,37 +13,39 @@ This is a super basic setup to get started with react, webpack, babel, express.
 
 
 #### Skeleton setup:
-- [React](https://reactjs.org/) @16.12.0
-- [Webpack](https://webpack.js.org/) @4.41.5
-- [Babel](https://babeljs.io/) @7.8.3
+- [React](https://reactjs.org/) @16.13.1
+- [Webpack](https://webpack.js.org/) @4.44.2
+- [Babel](https://babeljs.io/) @7.11.6
 - [Express](https://expressjs.com/en/4x/api.html) @4.17.1
-- [Styled components](https://styled-components.com/) @5.0.0
+- [Styled components](https://styled-components.com/) @5.2.0
 Basic example of `styled-components`
 
 
 ***Note: No testing frameworks included, [Jest](https://jestjs.io/docs/en/getting-started) is suggested***
-
-
 ### Dev Dependencies
 - @babel/cli
 - @babel/core
 - @babel/preset-env
 - @babel/preset-react
 - babel-loader
+- babel-plugin-styled-components
 - axios
 - express
 - webpack
 - webpack-cli
-- webpack-livereload-plugin
+- webpack-dev-middleware
+- webpack-hot-middleware
+
 ### Dependencies
 - react
 - react-dom
 - styled-components
+- styled-theming
 
 
 #### All at once
-###### if you do not want to clone repo, here's the npm install
+***if you do not want to clone repo, here's the npm install***
 ###### Dev Dependencies
-1. `npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-loader axios express webpack webpack-cli webpack-livereload-plugin css-loader style-loader`
+`npm i -D @babel/cli @babel/core @babel/preset-env @babel/preset-react babel-loader axios express webpack webpack-cli webpack-dev-middleware webpack-hot-middleware babel-plugin-styled-components css-loader style-loader`
 ###### Dependencies
-2. `npm i --save react react-dom styled-components faker`
+`npm i --save react react-dom styled-components styled-theming`
