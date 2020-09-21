@@ -1,40 +1,17 @@
-const environment = process.argv[2];
+// const environment = process.argv[2];
+const devServer = require('./middleware/webpackDev.js');
 
-const path = require('path');
 const express = require('express');
 
-const distPath = path.resolve('client', 'public')
+
 const app = express();
 const port = 3000;
-
-if(environment === 'development') {
-  const webpack = require('webpack');
-  const config = require('../webpack/webpack.config.dev.js');
-  const compiler = webpack(config);
-
-  app.use(require('webpack-dev-middleware')(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath,
-    hot: true,
-    reload: true,
-    stats: false
-  }))
-
-  app.use(require('webpack-hot-middleware')(compiler))
-  app.use(express.static(distPath));
-
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(distPath, 'index.html'))
-  })
-}
-if(environment === 'production'){
-  app.use('/', express.static(distPath));
-}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// Handle webpack dev server
+devServer({app, env: process.argv[2], static: express.static})
 
 app.listen(port, () => {
   console.log(`
